@@ -33,13 +33,13 @@ class ListaSimple:
         cadena = "digraph G {\nnode[shape=record];\nrankdir=\"LR\";\n"
 
         idNodo += 1
-        dotNode = "{} [label=\"{}\"];\n".format(idNodo, self.inicio.data)
+        dotNode = "{} [label=\"{}\"];\n".format(idNodo, self.inicio.data.toDotString())
         cadena = cadena + dotNode
 
         aux = self.inicio.siguiente
         while aux != None:
             idNodo += 1
-            dotNode = "{} [label=\"{}\"];\n".format(idNodo, aux.data)
+            dotNode = "{} [label=\"{}\"];\n".format(idNodo, aux.data.toDotString())
             dotNext = "{}->{};\n".format(idNodo-1, idNodo)
             cadena = cadena + dotNode + dotNext
             aux = aux.siguiente
