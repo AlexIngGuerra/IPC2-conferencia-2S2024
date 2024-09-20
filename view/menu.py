@@ -1,4 +1,7 @@
 from os import system
+from controllers.generarGrafica.graficarListas import generarGraficaListaSimple
+from controllers.generarGrafica.graficarListas import generarGraficaListaDoble
+
 
 def menu():
     while True:
@@ -10,8 +13,8 @@ def menu():
 
         opcion = input()
         if opcion == "1":
-            print("Graficando lista simple")
+            generarGraficaListaSimple()
         elif opcion == "2":
-            print("Graficando lista doble")
+            generarGraficaListaDoble()
         elif opcion == "3":
             break
