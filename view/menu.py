@@ -15,4 +15,3 @@ def menu():
             print("Graficando lista doble")
         elif opcion == "3":
             break
-        input()
